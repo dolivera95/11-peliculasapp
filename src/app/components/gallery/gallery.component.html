@@ -1,0 +1,49 @@
+<br>
+<h1 class="row animated fadeIn fast" *ngIf="peliculas[0]">{{titulo}}</h1>
+<hr>
+<div class="row animated fadeIn fast" *ngIf="peliculas[0]">
+
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="puntero col-md-12 div-pic-1"
+           [ngStyle]="{'background-image': 'url(' + (peliculas[0] | peliculaImagen) + ' ) ', 'background-position': 'center center'}"
+           [routerLink]="['/pelicula', peliculas[0].id]">
+        <span class="pic-titulo">{{peliculas[0].title}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="puntero col-sm-6 div-pic-2"
+           [ngStyle]="{'background-image': 'url(' + (peliculas[1] | peliculaImagen) + ' ) ', 'background-position': 'center center'}"
+           [routerLink]="['/pelicula', peliculas[1].id]">
+        <span class="pic-titulo">{{peliculas[1].title}}</span>
+      </div>
+      <div class="puntero col-sm-6 div-pic-2"
+           [ngStyle]="{'background-image': 'url(' + (peliculas[2] | peliculaImagen) + ' ) ', 'background-position': 'center center'}"
+           [routerLink]="['/pelicula', peliculas[2].id]">
+        <span class="pic-titulo">{{peliculas[2].title}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="puntero col-sm-6 div-pic-2"
+           [ngStyle]="{'background-image': 'url(' + (peliculas[3] | peliculaImagen) + ' ) ', 'background-position': 'center center'}"
+           [routerLink]="['/pelicula', peliculas[3].id]">
+        <span class="pic-titulo">{{peliculas[3].title}}</span>
+      </div>
+      <div class="puntero col-sm-6 div-pic-2"
+           [ngStyle]="{'background-image': 'url(' + (peliculas[4] | peliculaImagen) + ' ) ', 'background-position': 'center center'}"
+           [routerLink]="['/pelicula', peliculas[4].id]">
+        <span class="pic-titulo">{{peliculas[4].title}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="puntero col-md-12 div-pic-1"
+           [ngStyle]="{'background-image': 'url(' + (peliculas[5] | peliculaImagen) + ' ) ', 'background-position': 'center center'}"
+           [routerLink]="['/pelicula', peliculas[5].id]">
+        <span class="pic-titulo">{{peliculas[5].title}}</span>
+      </div>
+    </div>
+  </div>
+
+</div>

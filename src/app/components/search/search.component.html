@@ -1,0 +1,29 @@
+<div class="container main-container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label>Find:</label>
+        <input #texto (keyup.enter)="buscarPelicula(texto.value)" class="form-control" type="text" name="search" placeholder="Buscar película">
+        <button class="btn btn-outline-warning btn-block" type="button" name="button">Borrar</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h2>Resultados:</h2>
+    <div class="card-columns animated fadeIn fast" *ngIf="_ps.peliculas.length > 0  ">
+      <div class="card" *ngFor="let pelicula of _ps.peliculas">
+        <img [src]="(pelicula | peliculaImagen)" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">{{pelicula.title}}</h5>
+          <p class="card-text">{{pelicula.overview}}</p>
+          <p class="card-text">
+            <small class="text-muted">{{pelicula.release_date}}</small>
+          </p>
+          <button [routerLink]="['/pelicula', pelicula.id]" class="btn btn-outline-primary btn-block" type="button" name="button">
+            Ver detalle
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
